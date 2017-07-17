@@ -23,11 +23,11 @@ public class Main {
     }
 
     public static void showResults(double sum, double difference, double division, double multiplication, double remainder) {
-    System.out.println(sum);
-    System.out.println(difference);
-    System.out.println(division);
-    System.out.println(multiplication);
-    System.out.println(remainder);
+    System.out.println("The sum is " + sum);
+    System.out.println("The difference is " + difference);
+    System.out.println("The quotient is " + division);
+    System.out.println("The product is " + multiplication);
+    System.out.println("The remainder is " + remainder);
     }
 
 }
