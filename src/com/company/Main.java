@@ -5,21 +5,29 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        boolean isNumber = false;
 
-        System.out.println("Enter first number: ");
-        double operand1 = Double.parseDouble(scanner.nextLine());
+        while (isNumber == false) {
+            try {
+                System.out.println("Enter first number: ");
+                double operand1 = Double.parseDouble(scanner.nextLine());
 
-        System.out.println("Enter second number: ");
-        double operand2 = Double.parseDouble(scanner.nextLine());
+                System.out.println("Enter second number: ");
+                double operand2 = Double.parseDouble(scanner.nextLine());
 
-        double sum = operand1 + operand2;
-        double difference = operand1 - operand2;
-        double division = operand1 / operand2;
-        double multiplication = operand1 * operand2;
-        double remainder = operand1 % operand2;
+                isNumber = true;
 
-        showResults(sum, difference, division, multiplication, remainder);
+                double sum = operand1 + operand2;
+                double difference = operand1 - operand2;
+                double division = operand1 / operand2;
+                double multiplication = operand1 * operand2;
+                double remainder = operand1 % operand2;
 
+                showResults(sum, difference, division, multiplication, remainder);
+            } catch (NumberFormatException ex) {
+                System.out.println("Not a number try again");
+            }
+        }
     }
 
     public static void showResults(double sum, double difference, double division, double multiplication, double remainder) {
